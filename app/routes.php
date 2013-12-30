@@ -24,7 +24,7 @@ Route::get('/', function()
  */
 Route::post('register/user', function ()
 {
-    return View::make('hello');
+    return Response::json(array('success' => 'false'), 400);
 });
 
 /**
@@ -34,7 +34,7 @@ Route::post('register/user', function ()
  */
 Route::post('status/user', function ()
 {
-    return View::make('hello');
+    return Response::json(array('success' => 'false'), 400);
 });
 
 /**
@@ -44,7 +44,7 @@ Route::post('status/user', function ()
  */
 Route::post('prepare/probe', function ()
 {
-    return View::make('hello');
+    return Response::json(array('success' => 'false'), 400);
 });
 
 /**
@@ -54,7 +54,7 @@ Route::post('prepare/probe', function ()
  */
 Route::post('register/probe', function ()
 {
-    return View::make('hello');
+    return Response::json(array('success' => 'false'), 400);
 });
 
 /**
@@ -64,7 +64,7 @@ Route::post('register/probe', function ()
  */
 Route::post('update/gcm', function ()
 {
-    return View::make('hello');
+    return Response::json(array('success' => 'false'), 400);
 });
 
 /**
@@ -74,7 +74,7 @@ Route::post('update/gcm', function ()
  */
 Route::post('submit/url', function ()
 {
-    return View::make('hello');
+    return Response::json(array('success' => 'false'), 400);
 });
 
 /**
@@ -84,7 +84,7 @@ Route::post('submit/url', function ()
  */
 Route::post('response/httpt', function ()
 {
-    return View::make('hello');
+    return Response::json(array('success' => 'false'), 400);
 });
 
 /**
@@ -94,6 +94,6 @@ Route::post('response/httpt', function ()
  */
 Route::get('response/httpt', function ()
 {
-    return View::make('hello');
+    return Response::json(array('success' => 'false'), 400);
 });
 

@@ -10,6 +10,7 @@ class EndpointsTest extends TestCase {
 
 	/**
 	 * Check /register/user POST method exists.
+	 * It should return success:false by default, when no parameters are passed.
 	 * 
 	 * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fregister.2Fuser_-_Implemented
 	 * 
@@ -17,12 +18,14 @@ class EndpointsTest extends TestCase {
 	 */
 	public function testPostRegisterUser()
 	{
-		$this->call('POST', 'register/user');
-		$this->assertResponseOk();
+		$response = $this->call('POST', 'register/user');
+		$this->assertEquals('{"success":"false"}', $response->getContent());
+		$this->assertResponseStatus(400);
 	}
 
 	/**
 	 * Check /status/user POST method exists.
+	 * It should return success:false by default, when no parameters are passed.
 	 * 
 	 * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fstatus.2Fuser_-_Implemented
 	 * 
@@ -30,12 +33,14 @@ class EndpointsTest extends TestCase {
 	 */
 	public function testPostStatusUser()
 	{
-		$this->call('POST', 'status/user');
-		$this->assertResponseOk();
+		$response = $this->call('POST', 'status/user');
+		$this->assertEquals('{"success":"false"}', $response->getContent());
+		$this->assertResponseStatus(400);
 	}
 
 	/**
 	 * Check /prepare/probe POST method exists.
+	 * It should return success:false by default, when no parameters are passed.
 	 * 
 	 * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fprepare.2Fprobe_-_Implemented
 	 * 
@@ -43,12 +48,14 @@ class EndpointsTest extends TestCase {
 	 */
 	public function testPostPrepareProbe()
 	{
-		$this->call('POST', 'prepare/probe');
-		$this->assertResponseOk();
+		$response = $this->call('POST', 'prepare/probe');
+		$this->assertEquals('{"success":"false"}', $response->getContent());
+		$this->assertResponseStatus(400);
 	}
 
 	/**
 	 * Check /register/probe POST method exists.
+	 * It should return success:false by default, when no parameters are passed.
 	 * 
 	 * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fregister.2Fprobe_-_Implemented
 	 * 
@@ -56,12 +63,14 @@ class EndpointsTest extends TestCase {
 	 */
 	public function testPostRegisterProbe()
 	{
-		$this->call('POST', 'register/probe');
-		$this->assertResponseOk();
+		$response = $this->call('POST', 'register/probe');
+		$this->assertEquals('{"success":"false"}', $response->getContent());
+		$this->assertResponseStatus(400);
 	}
 
 	/**
 	 * Check /update/gcm POST method exists.
+	 * It should return success:false by default, when no parameters are passed.
 	 * 
 	 * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fupdate.2Fgcm_-_Implemented
 	 * 
@@ -69,12 +78,14 @@ class EndpointsTest extends TestCase {
 	 */
 	public function testPostUpdateGCM()
 	{
-		$this->call('POST', 'update/gcm');
-		$this->assertResponseOk();
+		$response = $this->call('POST', 'update/gcm');
+		$this->assertEquals('{"success":"false"}', $response->getContent());
+		$this->assertResponseStatus(400);
 	}
 
 	/**
 	 * Check /submit/url POST method exists.
+	 * It should return success:false by default, when no parameters are passed.
 	 * 
 	 * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fsubmit.2Furl_-_Implemented
 	 * 
@@ -82,12 +93,14 @@ class EndpointsTest extends TestCase {
 	 */
 	public function testPostSubmitURL()
 	{
-		$this->call('POST', 'submit/url');
-		$this->assertResponseOk();
+		$response = $this->call('POST', 'submit/url');
+		$this->assertEquals('{"success":"false"}', $response->getContent());
+		$this->assertResponseStatus(400);
 	}
 
 	/**
 	 * Check /response/httpt POST method exists.
+	 * It should return success:false by default, when no parameters are passed.
 	 * 
 	 * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fresponse.2Fhttpt
 	 * 
@@ -95,12 +108,14 @@ class EndpointsTest extends TestCase {
 	 */
 	public function testPostResponseHTTPT()
 	{
-		$this->call('POST', 'response/httpt');
-		$this->assertResponseOk();
+		$response = $this->call('POST', 'response/httpt');
+		$this->assertEquals('{"success":"false"}', $response->getContent());
+		$this->assertResponseStatus(400);
 	}
 
 	/**
 	 * Check /response/httpt GET method exists.
+	 * It should return success:false by default, when no parameters are passed.
 	 * 
 	 * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#GET_.2Frequest.2Fhttpt_-_Implemented
 	 * 
@@ -108,8 +123,9 @@ class EndpointsTest extends TestCase {
 	 */
 	public function testGetResponseHTTPT()
 	{
-		$this->call('GET', 'response/httpt');
-		$this->assertResponseOk();
+		$response = $this->call('GET', 'response/httpt');
+		$this->assertEquals('{"success":"false"}', $response->getContent());
+		$this->assertResponseStatus(400);
 	}
 
 }
