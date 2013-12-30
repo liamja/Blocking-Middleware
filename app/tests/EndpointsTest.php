@@ -19,7 +19,7 @@ class EndpointsTest extends TestCase {
 	public function testPostRegisterUser()
 	{
 		$response = $this->call('POST', 'register/user');
-		$this->assertEquals('{"success":"false"}', $response->getContent());
+		$this->assertRegExp('/"success":"false"/', $response->getContent());
 		$this->assertResponseStatus(400);
 	}
 
