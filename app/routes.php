@@ -11,12 +11,6 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
-
-
 /**
  * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fregister.2Fuser_-_Implemented
  * 
