@@ -16,35 +16,7 @@
  * 
  * @return Response
  */
-Route::post('register/user', function ()
-{
-    $input = Input::only('email', 'password');
-
-    $validator = Validator::make($input, array(
-        'email' => 'required|email',
-        'password' => 'required',
-    ));
-
-    if ($validator->passes())
-    {
-        return Response::json(
-            array(
-                'status' => 'pending',
-                'success' => 'true',
-                'private_key' => '-----BEGIN RSA PRIVATE KEY-----'
-                ), 201);
-    }
-    else
-    {
-        return Response::json(
-            array(
-                'success' => 'false',
-                'reason' => $validator->messages()->all()
-                ), 400);
-    }
-
-    return Response::json(array('success' => 'false'), 400);
-});
+Route::post('register/user', 'UserController@store');
 
 /**
  * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fstatus.2Fuser_-_Implemented
