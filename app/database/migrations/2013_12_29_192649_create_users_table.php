@@ -2,9 +2,6 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-/**
- * @author Liam Anderson <liamja@fastmail.fm>
- */
 class CreateUsersTable extends Migration {
 
 	private $tableName = 'users';

@@ -2,9 +2,6 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-/**
- * @author Liam Anderson <liamja@fastmail.fm>
- */
 class CreateTempurlsTable extends Migration {
 
 	private $tableName = 'tempURLs';

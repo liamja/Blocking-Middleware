@@ -6,16 +6,13 @@
  *
  * If the tests fail, run `php artisan migrate`
  * 
- * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API
- * @author Liam Anderson <liamja@fastmail.fm>
+ * @see https://github.com/openrightsgroup/Blocking-Middleware/blob/master/mysql/structure.sql
  */
 
 class DatabaseTest extends TestCase {
 
     /**
      * Check the users table exists.
-     * 
-     * @author Liam Anderson <liamja@fastmail.fm>
      * 
      * @return void
      */
@@ -27,8 +24,6 @@ class DatabaseTest extends TestCase {
     /**
      * Check the probes table exists.
      * 
-     * @author Liam Anderson <liamja@fastmail.fm>
-     * 
      * @return void
      */
     public function testProbesTableExists()
@@ -38,8 +33,6 @@ class DatabaseTest extends TestCase {
 
     /**
      * Check the tempURLs table exists.
-     * 
-     * @author Liam Anderson <liamja@fastmail.fm>
      * 
      * @return void
      */

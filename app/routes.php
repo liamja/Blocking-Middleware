@@ -18,10 +18,7 @@ Route::get('/', function()
 
 
 /**
- * /register/user POST method.
- * 
  * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fregister.2Fuser_-_Implemented
- * @author Liam Anderson <liamja@fastmail.fm>
  * 
  * @return Response
  */
@@ -31,10 +28,7 @@ Route::post('register/user', function ()
 });
 
 /**
- * /status/user POST method.
- * 
  * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fstatus.2Fuser_-_Implemented
- * @author Liam Anderson <liamja@fastmail.fm>
  * 
  * @return Response
  */
@@ -44,10 +38,7 @@ Route::post('status/user', function ()
 });
 
 /**
- * /prepare/probe POST method.
- * 
  * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fprepare.2Fprobe_-_Implemented
- * @author Liam Anderson <liamja@fastmail.fm>
  * 
  * @return Response
  */
@@ -57,10 +48,7 @@ Route::post('prepare/probe', function ()
 });
 
 /**
- * /register/probe POST method.
- * 
  * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fregister.2Fprobe_-_Implemented
- * @author Liam Anderson <liamja@fastmail.fm>
  * 
  * @return Response
  */
@@ -70,10 +58,7 @@ Route::post('register/probe', function ()
 });
 
 /**
- * /update/gcm POST method.
- * 
  * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fupdate.2Fgcm_-_Implemented
- * @author Liam Anderson <liamja@fastmail.fm>
  * 
  * @return Response
  */
@@ -83,10 +68,7 @@ Route::post('update/gcm', function ()
 });
 
 /**
- * /submit/url POST method.
- * 
  * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fsubmit.2Furl_-_Implemented
- * @author Liam Anderson <liamja@fastmail.fm>
  * 
  * @return Response
  */
@@ -96,10 +78,7 @@ Route::post('submit/url', function ()
 });
 
 /**
- * /response/httpt POST method.
- * 
  * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#POST_.2Fresponse.2Fhttpt
- * @author Liam Anderson <liamja@fastmail.fm>
  * 
  * @return Response
  */
@@ -109,10 +88,7 @@ Route::post('response/httpt', function ()
 });
 
 /**
- * /response/httpt GET method.
- * 
  * @see https://wiki.openrightsgroup.org/wiki/Censorship_Monitoring_Project_API#GET_.2Frequest.2Fhttpt_-_Implemented
- * @author Liam Anderson <liamja@fastmail.fm>
  * 
  * @return Response
  */

@@ -2,9 +2,6 @@
 
 use Illuminate\Database\Migrations\Migration;
 
-/**
- * @author Liam Anderson <liamja@fastmail.fm>
- */
 class CreateProbesTable extends Migration {
 
 	private $tableName = 'probes';
