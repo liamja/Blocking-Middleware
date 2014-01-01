@@ -3,18 +3,6 @@
 class UserController extends \BaseController {
 
 	/**
-	 * Generate the RSA key pairs for probe authentication.
-	 *
-	 * @return Array
-	 */
-	private function generateKeys()
-	{
-		$rsa = new Crypt_RSA();
-
-		return $rsa->createKey();
-	}
-
-	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
@@ -52,7 +40,7 @@ class UserController extends \BaseController {
 
 	    if ($validator->passes())
 	    {
-	    	$keyPair = $this->generateKeys();
+	    	$keyPair = with(new Crypt_RSA)->createKey();
 
 	    	$user = new User;
 
