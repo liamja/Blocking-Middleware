@@ -3,6 +3,18 @@
 class UserController extends \BaseController {
 
 	/**
+	 * Generate the RSA key pairs for probe authentication.
+	 *
+	 * @return Array
+	 */
+	private function generateKeys()
+	{
+		$rsa = new Crypt_RSA();
+
+		return $rsa->createKey();
+	}
+
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
@@ -40,11 +52,21 @@ class UserController extends \BaseController {
 
 	    if ($validator->passes())
 	    {
+	    	$keyPair = $this->generateKeys();
+
+	    	$user = new User;
+
+	    	$user->email = $input['email'];
+	    	$user->password = Hash::make($input['password']);
+	    	$user->publicKey = $keyPair['publickey'];
+
+	    	$user->save();
+
 	        return Response::json(
 	            array(
 	                'status' => 'pending',
 	                'success' => 'true',
-	                'private_key' => '-----BEGIN RSA PRIVATE KEY-----'
+	                'private_key' => $keyPair['privatekey']
 	                ), 201);
 	    }
 	    else
