@@ -66,6 +66,27 @@ class UserTest extends TestCase {
 	}
 
 	/**
+	 * Check that the user's public key is saved to the database during
+	 * registration.
+	 * 
+	 * @return void
+	 */
+	public function testPublicKeySavedOnRegistration()
+	{
+		$this->seed();
+
+		$postParams = array('email' => 'bob@example.com', 'password' => '123456abc');
+		$response = $this->call('POST', 'register/user', $postParams);
+
+		$publicKey = DB::table('users')
+			->where('email', $postParams['email'])
+			->pluck('publicKey');
+
+		$this->assertRegExp('/-----BEGIN PUBLIC KEY-----/',
+			$publicKey);
+	}
+
+	/**
 	 * Check that an RSA keypair was generated during registration.
 	 * 
 	 * @return void
