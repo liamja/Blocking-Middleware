@@ -81,4 +81,26 @@ class UserTest extends TestCase {
 			$response->getContent());
 	}
 
+	/**
+	 * Check that the same email cannot be registered more than once.
+	 * 
+	 * @return void
+	 */
+	public function testEmailIsUnique()
+	{
+		// $this->seed();
+
+		$postParams = array('email' => 'bob@example.com', 'password' => '123456abc');
+		$response = $this->call('POST', 'register/user', $postParams);
+
+		$regex = array('/"success":"false"/', '/"reason":/');
+
+		foreach ($regex as $regex)
+		{
+			$this->assertRegExp($regex, $response->getContent());
+		}
+
+		$this->assertResponseStatus(400);
+	}
+
 }

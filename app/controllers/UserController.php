@@ -46,7 +46,7 @@ class UserController extends \BaseController {
 	    $input = Input::only('email', 'password');
 
 	    $validator = Validator::make($input, array(
-	        'email' => 'required|email',
+	        'email' => 'required|email|unique:users',
 	        'password' => 'required',
 	    ));
 
